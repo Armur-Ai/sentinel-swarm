@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 506" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#060a06"/>
+      <stop offset="1" stop-color="#030503"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1b0f"/>
+      <stop offset="1" stop-color="#0b160d"/>
+    </linearGradient>
+    <style>
+      .txt{fill:#b8ffc8;font-size:13px;}
+      .dim{fill:#6fae82;font-size:13px;}
+      .faint{fill:#6fae82;font-size:13px;opacity:.7;}
+      .bright{fill:#39ff14;font-size:13px;}
+      .ai{fill:#7CFC9A;font-size:13px;}
+      .amber{fill:#b89a5e;font-size:13px;}
+      .green2{fill:#2ecc40;font-size:13px;}
+      .hdr{fill:#39ff14;font-size:13px;font-weight:700;letter-spacing:.5px;}
+      .prompt{fill:#2ecc40;font-size:13.5px;}
+      .cmd{fill:#39ff14;font-size:13.5px;font-weight:700;}
+      .barttl{fill:#6fae82;font-size:12px;letter-spacing:1px;}
+      .small{font-size:11px;}
+      .tagok{fill:#39ff14;font-size:12px;}
+      .tagmiss{fill:#6fae82;font-size:12px;opacity:.8;}
+    </style>
+  </defs>
+  <!-- window -->
+  <rect x="0.5" y="0.5" width="899" height="505" rx="12" fill="url(#bg)" stroke="#1f3b1f" stroke-width="1.5"/>
+  <!-- title bar -->
+  <path d="M0.5,12 a11.5,11.5 0 0 1 11.5,-11.5 h876 a11.5,11.5 0 0 1 11.5,11.5 v28 h-899 Z" fill="url(#bar)"/>
+  <line x1="0.5" y1="40" x2="899.5" y2="40" stroke="#1f3b1f" stroke-width="1.2"/>
+  <circle cx="22" cy="20" r="6" fill="#c0564e"/>
+  <circle cx="42" cy="20" r="6" fill="#b89a5e"/>
+  <circle cx="62" cy="20" r="6" fill="#2ecc40"/>
+  <text x="450.0" y="24" text-anchor="middle" class="barttl">sentinel — research · live swarm</text>
+  <g opacity="0.5">
+    <line x1="750" y1="180" x2="810" y2="160" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="750" y1="180" x2="780" y2="250" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="750" y1="180" x2="725" y2="235" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="810" y1="160" x2="840" y2="225" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="810" y1="160" x2="780" y2="250" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="840" y1="225" x2="780" y2="250" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="840" y1="225" x2="805" y2="300" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="840" y1="225" x2="845" y2="295" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="780" y1="250" x2="725" y2="235" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="780" y1="250" x2="805" y2="300" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="780" y1="250" x2="845" y2="295" stroke="#1f6e2a" stroke-width="0.8"/>
+    <line x1="805" y1="300" x2="845" y2="295" stroke="#1f6e2a" stroke-width="0.8"/>
+    <circle cx="750" cy="180" r="3.2" fill="#39ff14" opacity="0.8"/>
+    <circle cx="810" cy="160" r="3.2" fill="#39ff14" opacity="0.8"/>
+    <circle cx="840" cy="225" r="3.2" fill="#7CFC9A" opacity="0.8"/>
+    <circle cx="780" cy="250" r="3.2" fill="#39ff14" opacity="0.8"/>
+    <circle cx="725" cy="235" r="3.2" fill="#39ff14" opacity="0.8"/>
+    <circle cx="805" cy="300" r="3.2" fill="#7CFC9A" opacity="0.8"/>
+    <circle cx="845" cy="295" r="3.2" fill="#39ff14" opacity="0.8"/>
+  </g>
+  <text x="26" y="492" fill="#0f2a12" font-size="11" opacity="0.25">0x7fff · swarm · evidence · hypothesis · finding</text>
+  <text x="26" y="70" class="prompt" text-anchor="start">$ </text>
+  <text x="41.6" y="70" class="cmd" text-anchor="start">sentinel research ./target --mode hybrid</text>
+  <text x="26" y="112" class="faint" text-anchor="start">target</text>
+  <text x="88.4" y="112" class="txt" text-anchor="start">./target</text>
+  <text x="182.0" y="112" class="faint" text-anchor="start">sha256</text>
+  <text x="236.6" y="112" class="dim" text-anchor="start">9f3c1a…b7</text>
+  <text x="338.0" y="112" class="faint" text-anchor="start">mode</text>
+  <text x="377.0" y="112" class="ai" text-anchor="start">hybrid</text>
+  <text x="439.4" y="112" class="faint" text-anchor="start">director</text>
+  <text x="509.59999999999997" y="112" class="bright" text-anchor="start">coordinating</text>
+  <text x="26" y="154" class="hdr" text-anchor="start">SWARM STAGES</text>
+  <text x="447.2" y="154" class="faint" text-anchor="start">workers</text>
+  <text x="40" y="175" class="bright" text-anchor="start">✔</text>
+  <text x="55.6" y="175" class="txt" text-anchor="start">1 Reverse Engineering</text>
+  <rect x="252.2" y="165" width="170" height="8" rx="3" fill="#0e1a0e" stroke="#1f3b1f" stroke-width="1"/>
+  <rect x="252.2" y="165" width="170" height="8" rx="3" fill="#39ff14" opacity="0.85"/>
+  <text x="432.2" y="175" class="dim" text-anchor="start">100%</text>
+  <text x="476.2" y="175" class="faint" text-anchor="start">3 workers · 3 det · 0 AI</text>
+  <text x="40" y="196" class="ai" text-anchor="start">◐</text>
+  <text x="55.6" y="196" class="txt" text-anchor="start">2 Program Reasoning</text>
+  <rect x="252.2" y="186" width="170" height="8" rx="3" fill="#0e1a0e" stroke="#1f3b1f" stroke-width="1"/>
+  <rect x="252.2" y="186" width="122" height="8" rx="3" fill="#2ecc40" opacity="0.85"/>
+  <text x="432.2" y="196" class="dim" text-anchor="start"> 72%</text>
+  <text x="476.2" y="196" class="faint" text-anchor="start">4 workers · 3 det · 1 AI</text>
+  <text x="40" y="217" class="ai" text-anchor="start">◐</text>
+  <text x="55.6" y="217" class="txt" text-anchor="start">3 Vuln Discovery</text>
+  <rect x="252.2" y="207" width="170" height="8" rx="3" fill="#0e1a0e" stroke="#1f3b1f" stroke-width="1"/>
+  <rect x="252.2" y="207" width="93" height="8" rx="3" fill="#2ecc40" opacity="0.85"/>
+  <text x="432.2" y="217" class="dim" text-anchor="start"> 55%</text>
+  <text x="476.2" y="217" class="faint" text-anchor="start">5 workers · 4 det · 1 AI</text>
+  <text x="40" y="238" class="ai" text-anchor="start">◐</text>
+  <text x="55.6" y="238" class="txt" text-anchor="start">4 Dynamic Analysis</text>
+  <rect x="252.2" y="228" width="170" height="8" rx="3" fill="#0e1a0e" stroke="#1f3b1f" stroke-width="1"/>
+  <rect x="252.2" y="228" width="57" height="8" rx="3" fill="#2ecc40" opacity="0.85"/>
+  <text x="432.2" y="238" class="dim" text-anchor="start"> 34%</text>
+  <text x="476.2" y="238" class="faint" text-anchor="start">2 workers · 2 det · 0 AI</text>
+  <text x="40" y="259" class="ai" text-anchor="start">◐</text>
+  <text x="55.6" y="259" class="txt" text-anchor="start">5 Crash Triage</text>
+  <rect x="252.2" y="249" width="170" height="8" rx="3" fill="#0e1a0e" stroke="#1f3b1f" stroke-width="1"/>
+  <rect x="252.2" y="249" width="20" height="8" rx="3" fill="#2ecc40" opacity="0.85"/>
+  <text x="432.2" y="259" class="dim" text-anchor="start"> 12%</text>
+  <text x="476.2" y="259" class="faint" text-anchor="start">2 workers · 1 det · 1 AI</text>
+  <text x="40" y="280" class="faint" text-anchor="start">·</text>
+  <text x="55.6" y="280" class="faint" text-anchor="start">6 Patch Analysis</text>
+  <rect x="252.2" y="270" width="170" height="8" rx="3" fill="#0e1a0e" stroke="#1f3b1f" stroke-width="1"/>
+  <text x="432.2" y="280" class="dim" text-anchor="start">  0%</text>
+  <text x="476.2" y="280" class="faint" text-anchor="start">0 workers · queued</text>
+  <text x="26" y="322" class="hdr" text-anchor="start">Evidence graph</text>
+  <text x="150.8" y="322" class="faint" text-anchor="start">nodes</text>
+  <text x="197.6" y="322" class="txt" text-anchor="start">1,284</text>
+  <text x="260.0" y="322" class="faint" text-anchor="start">edges</text>
+  <text x="306.8" y="322" class="txt" text-anchor="start">3,901</text>
+  <text x="377.0" y="322" class="faint" text-anchor="start">hypotheses</text>
+  <text x="462.8" y="322" class="txt" text-anchor="start">47</text>
+  <text x="494.0" y="322" class="faint" text-anchor="start">(12 under test)</text>
+  <text x="26" y="343" class="hdr" text-anchor="start">Budget</text>
+  <text x="150.8" y="343" class="faint" text-anchor="start">elapsed</text>
+  <text x="213.2" y="343" class="txt" text-anchor="start">04:12</text>
+  <text x="260.0" y="343" class="faint" text-anchor="start">cpu</text>
+  <text x="291.2" y="343" class="dim" text-anchor="start">61%</text>
+  <text x="377.0" y="343" class="faint" text-anchor="start">ai tokens</text>
+  <text x="462.8" y="343" class="amber" text-anchor="start">18.2k / 50k</text>
+  <text x="26" y="385" class="hdr" text-anchor="start">Emerging findings</text>
+  <text x="40" y="406" class="green2" text-anchor="start">∙</text>
+  <text x="55.6" y="406" class="txt" text-anchor="start">parse_header()</text>
+  <text x="180.4" y="406" class="dim" text-anchor="start">unbounded copy — hypothesis supported, repro pending</text>
+  <text x="648.4" y="406" class="amber" text-anchor="start">conf 0.62</text>
+  <text x="40" y="427" class="green2" text-anchor="start">∙</text>
+  <text x="55.6" y="427" class="txt" text-anchor="start">read_record()</text>
+  <text x="180.4" y="427" class="dim" text-anchor="start">oob read — crash reproduced, triage in progress</text>
+  <text x="648.4" y="427" class="ai" text-anchor="start">conf 0.78</text>
+  <text x="26" y="469" class="faint" text-anchor="start">director:</text>
+  <text x="104.0" y="469" class="ai" text-anchor="start">stage 3 crash may reopen stage 2 — scheduling backward investigation</text>
+</svg>

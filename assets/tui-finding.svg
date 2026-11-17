@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 590" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#060a06"/>
+      <stop offset="1" stop-color="#030503"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1b0f"/>
+      <stop offset="1" stop-color="#0b160d"/>
+    </linearGradient>
+    <style>
+      .txt{fill:#b8ffc8;font-size:13px;}
+      .dim{fill:#6fae82;font-size:13px;}
+      .faint{fill:#6fae82;font-size:13px;opacity:.7;}
+      .bright{fill:#39ff14;font-size:13px;}
+      .ai{fill:#7CFC9A;font-size:13px;}
+      .amber{fill:#b89a5e;font-size:13px;}
+      .green2{fill:#2ecc40;font-size:13px;}
+      .hdr{fill:#39ff14;font-size:13px;font-weight:700;letter-spacing:.5px;}
+      .prompt{fill:#2ecc40;font-size:13.5px;}
+      .cmd{fill:#39ff14;font-size:13.5px;font-weight:700;}
+      .barttl{fill:#6fae82;font-size:12px;letter-spacing:1px;}
+      .small{font-size:11px;}
+      .tagok{fill:#39ff14;font-size:12px;}
+      .tagmiss{fill:#6fae82;font-size:12px;opacity:.8;}
+    </style>
+  </defs>
+  <!-- window -->
+  <rect x="0.5" y="0.5" width="899" height="589" rx="12" fill="url(#bg)" stroke="#1f3b1f" stroke-width="1.5"/>
+  <!-- title bar -->
+  <path d="M0.5,12 a11.5,11.5 0 0 1 11.5,-11.5 h876 a11.5,11.5 0 0 1 11.5,11.5 v28 h-899 Z" fill="url(#bar)"/>
+  <line x1="0.5" y1="40" x2="899.5" y2="40" stroke="#1f3b1f" stroke-width="1.2"/>
+  <circle cx="22" cy="20" r="6" fill="#c0564e"/>
+  <circle cx="42" cy="20" r="6" fill="#b89a5e"/>
+  <circle cx="62" cy="20" r="6" fill="#2ecc40"/>
+  <text x="450.0" y="24" text-anchor="middle" class="barttl">sentinel — evidence F-0007</text>
+  <text x="26" y="576" fill="#0f2a12" font-size="11" opacity="0.25">0x7fff · provenance · reproducible · evidence-backed</text>
+  <text x="26" y="70" class="prompt" text-anchor="start">$ </text>
+  <text x="41.6" y="70" class="cmd" text-anchor="start">sentinel evidence F-0007</text>
+  <text x="26" y="112" class="hdr" text-anchor="start">Finding</text>
+  <text x="96.2" y="112" class="bright" text-anchor="start">F-0007</text>
+  <text x="166.4" y="112" class="amber" text-anchor="start">· validated · authorized research</text>
+  <text x="26" y="133" class="txt" text-anchor="start">parse_header(): unbounded length field drives stack buffer write</text>
+  <text x="26" y="175" class="faint" text-anchor="start">Confidence</text>
+  <text x="127.39999999999999" y="175" class="bright" text-anchor="start">0.86</text>
+  <text x="182.0" y="175" class="dim" text-anchor="start">memory-safety defect · crash reproduced · not proven exploitable</text>
+  <text x="26" y="217" class="hdr" text-anchor="start">Evidence trail</text>
+  <text x="40" y="238" class="green2" text-anchor="start">├─</text>
+  <text x="63.4" y="238" class="ai" text-anchor="start">tool</text>
+  <text x="164.8" y="238" class="txt" text-anchor="start">rizin / ghidra</text>
+  <text x="289.6" y="238" class="dim" text-anchor="start">located parse_header() and its length field</text>
+  <text x="40" y="259" class="green2" text-anchor="start">├─</text>
+  <text x="63.4" y="259" class="ai" text-anchor="start">hypothesis</text>
+  <text x="164.8" y="259" class="txt" text-anchor="start">H-0031</text>
+  <text x="289.6" y="259" class="dim" text-anchor="start">length is attacker-controlled, bound unchecked</text>
+  <text x="40" y="280" class="green2" text-anchor="start">├─</text>
+  <text x="63.4" y="280" class="ai" text-anchor="start">experiment</text>
+  <text x="164.8" y="280" class="txt" text-anchor="start">angr + afl-fuzz</text>
+  <text x="289.6" y="280" class="dim" text-anchor="start">reachability confirmed; crashing input found</text>
+  <text x="40" y="301" class="green2" text-anchor="start">└─</text>
+  <text x="63.4" y="301" class="ai" text-anchor="start">reproducer</text>
+  <text x="164.8" y="301" class="txt" text-anchor="start">R-0012</text>
+  <text x="289.6" y="301" class="dim" text-anchor="start">deterministic repro in isolated microVM</text>
+  <text x="26" y="343" class="hdr" text-anchor="start">Provenance</text>
+  <text x="40" y="364" class="faint" text-anchor="start">tools</text>
+  <text x="133.6" y="364" class="dim" text-anchor="start">rizin 0.7.3 · ghidra 11.0 · angr 9.2 · afl-fuzz 4.21</text>
+  <text x="40" y="385" class="faint" text-anchor="start">binary</text>
+  <text x="133.6" y="385" class="dim" text-anchor="start">target  sha256 9f3c1a…b7  (immutable snapshot)</text>
+  <text x="40" y="406" class="faint" text-anchor="start">recorded</text>
+  <text x="133.6" y="406" class="dim" text-anchor="start">2026-11-17T14:08:22Z  ·  run 3b9f  ·  mode hybrid</text>
+  <text x="40" y="427" class="faint" text-anchor="start">reproduced</text>
+  <text x="133.6" y="427" class="dim" text-anchor="start">yes  ·  3/3 attempts  ·  sanitizer: ASan</text>
+  <text x="26" y="469" class="hdr" text-anchor="start">Remediation</text>
+  <text x="40" y="490" class="txt" text-anchor="start">Validate the length field against the destination buffer size</text>
+  <text x="40" y="511" class="txt" text-anchor="start">before copy; reject or clamp oversized records. For human review.</text>
+  <text x="26" y="553" class="amber" text-anchor="start">No exploit or payload is generated — defensive, reproducible analysis only.</text>
+</svg>
