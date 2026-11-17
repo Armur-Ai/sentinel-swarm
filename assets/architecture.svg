@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1020" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05080500"/>
+      <stop offset="0" stop-color="#060a06"/>
+      <stop offset="1" stop-color="#030503"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#39ff14"/>
+      <stop offset="1" stop-color="#1f9e2e"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#39ff14"/>
+    </marker>
+    <marker id="arrowdim" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#8a6a2e"/>
+    </marker>
+    <style>
+      .panel{fill:#0a110a;stroke:#1f3b1f;stroke-width:1.5;}
+      .hub{fill:#0b160d;stroke:#2ecc40;stroke-width:2;}
+      .lbl{fill:#b8ffc8;font-size:15px;}
+      .sub{fill:#6fae82;font-size:11px;}
+      .tag{fill:#0e1a0e;stroke:#245c2a;stroke-width:1;}
+      .tagtxt{fill:#9cf0b0;font-size:10.5px;}
+      .title{fill:#39ff14;font-weight:700;}
+      .flow{stroke:#2a7d38;stroke-width:1.6;fill:none;marker-end:url(#arrow);}
+      .pub{stroke:#39ff14;stroke-width:1.4;fill:none;opacity:.75;}
+      .feedback{stroke:#8a6a2e;stroke-width:1.5;fill:none;stroke-dasharray:6 5;marker-end:url(#arrowdim);}
+      .agent{fill:#0d1f10;stroke:#39ff14;stroke-width:1.2;}
+      .agentai{fill:#122a14;stroke:#7CFC9A;stroke-width:1.2;}
+      .mesh{stroke:#1f6e2a;stroke-width:.8;opacity:.5;}
+    </style>
+  </defs>
+
+  <rect width="1280" height="1020" fill="url(#bg)"/>
+  <!-- faint binary/grid motif -->
+  <g fill="#0f2a12" font-size="11" opacity="0.25">
+    <text x="30" y="30">01001100 01001001 01000110 01000101</text>
+    <text x="960" y="30">10110010 00101101 01011010 10100101</text>
+    <text x="30" y="1000">0x7fff · swarm · evidence · hypothesis · finding</text>
+  </g>
+
+  <!-- Title -->
+  <text x="640" y="48" text-anchor="middle" class="title" font-size="30" letter-spacing="6">SENTINEL SWARM</text>
+  <text x="640" y="72" text-anchor="middle" class="sub" font-size="13" letter-spacing="2">AUTONOMOUS BINARY RESEARCH THROUGH COORDINATED INTELLIGENCE</text>
+
+  <!-- Research Director -->
+  <rect x="430" y="96" width="420" height="78" rx="10" class="hub"/>
+  <text x="640" y="126" text-anchor="middle" class="title" font-size="18">RESEARCH DIRECTOR</text>
+  <text x="640" y="148" text-anchor="middle" class="sub">scope check · plan · instantiate swarms · budget · resolve conflicts</text>
+  <text x="640" y="164" text-anchor="middle" class="sub">deterministic by default · in AI modes it validates before it executes</text>
+
+  <!-- Evidence Graph hub -->
+  <rect x="300" y="214" width="680" height="96" rx="10" class="hub"/>
+  <text x="640" y="246" text-anchor="middle" class="title" font-size="17">SHARED EVIDENCE &amp; HYPOTHESIS GRAPH</text>
+  <text x="640" y="268" text-anchor="middle" class="sub">typed · persistent (SQLite + petgraph) · content-addressed artifacts</text>
+  <text x="640" y="286" text-anchor="middle" class="sub">Binary · Function · Hypothesis · Experiment · Crash · Reproducer · Finding · Patch</text>
+  <text x="640" y="302" text-anchor="middle" class="sub">CALLS · DERIVED_FROM · SUPPORTS · CONTRADICTS · TESTED_BY · REPRODUCED_BY · AFFECTS · FIXED_BY</text>
+
+  <!-- Director -> Evidence graph -->
+  <path class="flow" d="M640,174 L640,210"/>
+
+  <!-- ============ SIX STAGE MICRO-SWARMS (2 rows x 3) ============ -->
+  <!-- stage group template drawn inline -->
+  <!-- Row 1 y=360 ; Row 2 y=636 ; cols x=40, 480, 920 (w=320 h=232) -->
+
+  <!-- helper: each panel has title, mode line, 4 agents + mesh, tool tags -->
+  <!-- STAGE 1 -->
+  <g transform="translate(40,360)">
+    <rect width="320" height="232" rx="9" class="panel"/>
+    <text x="16" y="28" class="title" font-size="15">1 · REVERSE ENGINEERING</text>
+    <text x="16" y="46" class="sub">micro-swarm — det · hybrid · AI workers</text>
+    <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
+    <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
+    <text x="16" y="168" class="sub">triage · functions · CFG/call-graph · decompile</text>
+    <g font-size="10.5"><rect class="tag" x="16" y="182" width="56" height="22" rx="5"/><text x="44" y="197" text-anchor="middle" class="tagtxt">Ghidra</text>
+    <rect class="tag" x="80" y="182" width="48" height="22" rx="5"/><text x="104" y="197" text-anchor="middle" class="tagtxt">Rizin</text>
+    <rect class="tag" x="136" y="182" width="92" height="22" rx="5"/><text x="182" y="197" text-anchor="middle" class="tagtxt">Binary Ninja*</text></g>
+  </g>
+
+  <!-- STAGE 2 -->
+  <g transform="translate(480,360)">
+    <rect width="320" height="232" rx="9" class="panel"/>
+    <text x="16" y="28" class="title" font-size="15">2 · PROGRAM REASONING</text>
+    <text x="16" y="46" class="sub">micro-swarm — bounded symbolic analysis</text>
+    <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
+    <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
+    <text x="16" y="168" class="sub">reachability · constraints · solver-proven vs hypothesis</text>
+    <g font-size="10.5"><rect class="tag" x="16" y="182" width="44" height="22" rx="5"/><text x="38" y="197" text-anchor="middle" class="tagtxt">angr</text>
+    <rect class="tag" x="68" y="182" width="52" height="22" rx="5"/><text x="94" y="197" text-anchor="middle" class="tagtxt">Triton</text>
+    <rect class="tag" x="128" y="182" width="34" height="22" rx="5"/><text x="145" y="197" text-anchor="middle" class="tagtxt">Z3</text></g>
+  </g>
+
+  <!-- STAGE 3 -->
+  <g transform="translate(920,360)">
+    <rect width="320" height="232" rx="9" class="panel"/>
+    <text x="16" y="28" class="title" font-size="15">3 · VULN DISCOVERY</text>
+    <text x="16" y="46" class="sub">micro-swarm — isolated fuzzing campaigns</text>
+    <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
+    <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
+    <text x="16" y="168" class="sub">harness · corpus · coverage · crashes (≠ exploit)</text>
+    <g font-size="10.5"><rect class="tag" x="16" y="182" width="52" height="22" rx="5"/><text x="42" y="197" text-anchor="middle" class="tagtxt">AFL++</text>
+    <rect class="tag" x="76" y="182" width="72" height="22" rx="5"/><text x="112" y="197" text-anchor="middle" class="tagtxt">libFuzzer</text>
+    <rect class="tag" x="156" y="182" width="78" height="22" rx="5"/><text x="195" y="197" text-anchor="middle" class="tagtxt">honggfuzz</text></g>
+  </g>
+
+  <!-- STAGE 4 -->
+  <g transform="translate(40,636)">
+    <rect width="320" height="232" rx="9" class="panel"/>
+    <text x="16" y="28" class="title" font-size="15">4 · DYNAMIC ANALYSIS</text>
+    <text x="16" y="46" class="sub">micro-swarm — isolated execution only</text>
+    <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
+    <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
+    <text x="16" y="168" class="sub">registers/memory · traces · static↔dynamic</text>
+    <g font-size="10.5"><rect class="tag" x="16" y="182" width="40" height="22" rx="5"/><text x="36" y="197" text-anchor="middle" class="tagtxt">GDB</text>
+    <rect class="tag" x="64" y="182" width="48" height="22" rx="5"/><text x="88" y="197" text-anchor="middle" class="tagtxt">Frida</text>
+    <rect class="tag" x="120" y="182" width="78" height="22" rx="5"/><text x="159" y="197" text-anchor="middle" class="tagtxt">WinDbg*</text></g>
+  </g>
+
+  <!-- STAGE 5 -->
+  <g transform="translate(480,636)">
+    <rect width="320" height="232" rx="9" class="panel"/>
+    <text x="16" y="28" class="title" font-size="15">5 · CRASH TRIAGE</text>
+    <text x="16" y="46" class="sub">micro-swarm — reproduce · dedup · root-cause</text>
+    <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
+    <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
+    <text x="16" y="168" class="sub">signatures · memory-safety vs ordinary · confidence</text>
+    <g font-size="10.5"><rect class="tag" x="16" y="182" width="48" height="22" rx="5"/><text x="40" y="197" text-anchor="middle" class="tagtxt">ASan</text>
+    <rect class="tag" x="72" y="182" width="54" height="22" rx="5"/><text x="99" y="197" text-anchor="middle" class="tagtxt">UBSan</text>
+    <rect class="tag" x="134" y="182" width="64" height="22" rx="5"/><text x="166" y="197" text-anchor="middle" class="tagtxt">Valgrind</text></g>
+  </g>
+
+  <!-- STAGE 6 -->
+  <g transform="translate(920,636)">
+    <rect width="320" height="232" rx="9" class="panel"/>
+    <text x="16" y="28" class="title" font-size="15">6 · PATCH ANALYSIS</text>
+    <text x="16" y="46" class="sub">micro-swarm — authorized version diffing</text>
+    <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
+    <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
+    <text x="16" y="168" class="sub">changed fns · regression · incomplete-fix (human review)</text>
+    <g font-size="10.5"><rect class="tag" x="16" y="182" width="62" height="22" rx="5"/><text x="47" y="197" text-anchor="middle" class="tagtxt">BinDiff</text>
+    <rect class="tag" x="86" y="182" width="68" height="22" rx="5"/><text x="120" y="197" text-anchor="middle" class="tagtxt">Diaphora</text></g>
+  </g>
+
+  <!-- publish/subscribe links between evidence hub and each stage -->
+  <path class="pub" d="M200,360 C200,330 260,312 300,300"/>
+  <path class="pub" d="M640,360 L640,310"/>
+  <path class="pub" d="M1080,360 C1080,330 1020,312 980,300"/>
+  <path class="pub" d="M200,636 C200,330 300,320 320,300"/>
+  <path class="pub" d="M640,636 C640,500 640,420 640,312"/>
+  <path class="pub" d="M1080,636 C1080,330 980,320 960,300"/>
+
+  <!-- stages feed findings -->
+  <path class="flow" d="M200,868 C200,910 420,928 560,936"/>
+  <path class="flow" d="M640,868 L640,922"/>
+  <path class="flow" d="M1080,868 C1080,910 860,928 720,936"/>
+
+  <!-- Validated findings -->
+  <rect x="440" y="924" width="400" height="74" rx="10" class="hub"/>
+  <text x="640" y="954" text-anchor="middle" class="title" font-size="16">VALIDATED RESEARCH FINDINGS</text>
+  <text x="640" y="976" text-anchor="middle" class="sub">reproducible · evidence-backed · explicit confidence · provenance</text>
+
+  <!-- backward feedback: findings can reopen earlier stages -->
+  <path class="feedback" d="M840,961 C1180,961 1255,500 1255,120 C1255,96 900,96 852,112"/>
+  <text x="1120" y="500" text-anchor="middle" class="sub" fill="#b89a5e" transform="rotate(90 1120 500)">backward investigation · reopen stages</text>
+
+  <!-- legend -->
+  <g transform="translate(40,120)">
+    <circle class="agent" cx="8" cy="8" r="8"/><text x="24" y="12" class="sub">deterministic worker</text>
+    <circle class="agentai" cx="8" cy="32" r="8"/><text x="24" y="36" class="sub">AI / hybrid worker</text>
+    <text x="0" y="60" class="sub" fill="#b89a5e">* optional / proprietary tool</text>
+  </g>
+</svg>
