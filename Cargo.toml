@@ -1,0 +1,43 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/sentinel-core",
+    "crates/sentinel-runtime",
+    "crates/sentinel-swarm",
+    "crates/sentinel-evidence",
+    "crates/sentinel-policy",
+    "crates/sentinel-models",
+    "crates/sentinel-tools",
+    "crates/sentinel-workers",
+    "crates/sentinel-storage",
+    "crates/sentinel-reporting",
+    "crates/sentinel-cli",
+]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT"
+repository = "https://github.com/Armur-Ai/sentinel-swarm"
+authors = ["Armur AI"]
+
+# Shared dependency versions. Individual crates opt in via `dep.workspace = true`
+# as the implementation lands; the current stubs stay dependency-light so the
+# workspace compiles cleanly from day one.
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "process", "time"] }
+clap = { version = "4", features = ["derive"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
+petgraph = "0.6"
+sha2 = "0.10"
+
+[profile.release]
+opt-level = 3
+lto = "thin"

@@ -1,0 +1,11 @@
+[package]
+name = "sentinel-models"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "The model-agnostic AI layer: a common interface over local and OpenAI-compatible providers, by role."
+
+[dependencies]

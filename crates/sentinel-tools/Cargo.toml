@@ -1,0 +1,11 @@
+[package]
+name = "sentinel-tools"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "Tool adapters (Ghidra, Rizin, GDB, AFL++, ...) and the registry that reports their availability honestly."
+
+[dependencies]

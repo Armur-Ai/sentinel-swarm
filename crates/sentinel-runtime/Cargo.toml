@@ -1,0 +1,11 @@
+[package]
+name = "sentinel-runtime"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "The general-purpose agent & subagent runtime: identity, lifecycle, capabilities, heartbeats, cancellation, checkpoint/resume."
+
+[dependencies]

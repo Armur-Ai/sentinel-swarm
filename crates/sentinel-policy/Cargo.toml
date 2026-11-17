@@ -1,0 +1,11 @@
+[package]
+name = "sentinel-policy"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "Capability-based authorization, target-scope enforcement, resource budgets, and isolation policy."
+
+[dependencies]

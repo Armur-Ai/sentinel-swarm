@@ -1,0 +1,11 @@
+[package]
+name = "sentinel-evidence"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "The typed, persistent evidence & hypothesis graph — the platform's single source of truth."
+
+[dependencies]

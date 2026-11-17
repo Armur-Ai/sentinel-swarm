@@ -1,0 +1,11 @@
+[package]
+name = "sentinel-swarm"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "The micro-swarm runtime and the Research Director that instantiates, schedules, and coordinates heterogeneous workers."
+
+[dependencies]

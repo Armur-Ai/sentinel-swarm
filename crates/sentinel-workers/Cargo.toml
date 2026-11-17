@@ -1,0 +1,11 @@
+[package]
+name = "sentinel-workers"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "Concrete deterministic, hybrid, and AI workers for each of the six research stages."
+
+[dependencies]
