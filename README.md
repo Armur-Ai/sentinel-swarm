@@ -71,6 +71,22 @@ flowchart TD
 
 `*` optional / proprietary tools — never required, always degrade gracefully.
 
+## Terminal preview
+
+Sentinel Swarm is a terminal tool. These are **mockups of the planned terminal UI** — illustrative, not recorded runs. No numbers or findings below are real; they exist to convey the intended feel.
+
+<img src="assets/tui-doctor.svg" alt="Mockup of `sentinel doctor`: an environment health check listing platform status and analysis-tool availability with green [available] and dim [missing] tags, ending in 'Active mode: deterministic'." width="100%">
+
+<sub>**`sentinel doctor`** — environment health check and runtime tool detection; deterministic mode needs no AI provider. *(mockup)*</sub>
+
+<img src="assets/tui-research.svg" alt="Mockup of `sentinel research ./target --mode hybrid`: a live swarm dashboard showing six research stages with progress bars and per-stage worker counts, an evidence-graph counter, a budget/elapsed line, and emerging findings." width="100%">
+
+<sub>**`sentinel research ./target --mode hybrid`** — a live swarm dashboard: six micro-swarm stages with worker counts, the shared evidence graph, budget, and emerging findings. *(mockup)*</sub>
+
+<img src="assets/tui-finding.svg" alt="Mockup of `sentinel evidence F-0007`: a single validated finding with confidence, an evidence trail from tool to hypothesis to experiment to reproducer, provenance, and a remediation note — defensive analysis only." width="100%">
+
+<sub>**`sentinel evidence <id>`** — one validated finding with its full evidence trail, provenance, and remediation note. Defensive, reproducible analysis only — no exploit or payload. *(mockup)*</sub>
+
 ## Micro-swarm execution model
 
 > **Every research stage is a dynamically instantiated micro-swarm** — not a hardcoded step.
