@@ -29,6 +29,7 @@
       .agent{fill:#0d1f10;stroke:#39ff14;stroke-width:1.2;}
       .agentai{fill:#122a14;stroke:#7CFC9A;stroke-width:1.2;}
       .mesh{stroke:#1f6e2a;stroke-width:.8;opacity:.5;}
+      .sdesc{fill:#6fae82;font-size:9px;}
     </style>
   </defs>
 
@@ -54,8 +55,8 @@
   <rect x="300" y="214" width="680" height="96" rx="10" class="hub"/>
   <text x="640" y="246" text-anchor="middle" class="title" font-size="17">SHARED EVIDENCE &amp; HYPOTHESIS GRAPH</text>
   <text x="640" y="268" text-anchor="middle" class="sub">typed · persistent (SQLite + petgraph) · content-addressed artifacts</text>
-  <text x="640" y="286" text-anchor="middle" class="sub">Binary · Function · Hypothesis · Experiment · Crash · Reproducer · Finding · Patch</text>
-  <text x="640" y="302" text-anchor="middle" class="sub">CALLS · DERIVED_FROM · SUPPORTS · CONTRADICTS · TESTED_BY · REPRODUCED_BY · AFFECTS · FIXED_BY</text>
+  <text x="640" y="286" text-anchor="middle" class="sub" font-size="9.5">Binary · Function · Hypothesis · Experiment · Crash · Reproducer · Finding · Patch</text>
+  <text x="640" y="302" text-anchor="middle" class="sub" font-size="9">CALLS · DERIVED_FROM · SUPPORTS · CONTRADICTS · TESTED_BY · REPRODUCED_BY · AFFECTS · FIXED_BY</text>
 
   <!-- Director -> Evidence graph -->
   <path class="flow" d="M640,174 L640,210"/>
@@ -72,7 +73,7 @@
     <text x="16" y="46" class="sub">micro-swarm — det · hybrid · AI workers</text>
     <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
     <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
-    <text x="16" y="168" class="sub">triage · functions · CFG/call-graph · decompile</text>
+    <text x="16" y="168" class="sdesc">triage · functions · CFG/call-graph · decompile</text>
     <g font-size="10.5"><rect class="tag" x="16" y="182" width="56" height="22" rx="5"/><text x="44" y="197" text-anchor="middle" class="tagtxt">Ghidra</text>
     <rect class="tag" x="80" y="182" width="48" height="22" rx="5"/><text x="104" y="197" text-anchor="middle" class="tagtxt">Rizin</text>
     <rect class="tag" x="136" y="182" width="92" height="22" rx="5"/><text x="182" y="197" text-anchor="middle" class="tagtxt">Binary Ninja*</text></g>
@@ -85,7 +86,7 @@
     <text x="16" y="46" class="sub">micro-swarm — bounded symbolic analysis</text>
     <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
     <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
-    <text x="16" y="168" class="sub">reachability · constraints · solver-proven vs hypothesis</text>
+    <text x="16" y="168" class="sdesc">reachability · constraints · solver-proven vs hypothesis</text>
     <g font-size="10.5"><rect class="tag" x="16" y="182" width="44" height="22" rx="5"/><text x="38" y="197" text-anchor="middle" class="tagtxt">angr</text>
     <rect class="tag" x="68" y="182" width="52" height="22" rx="5"/><text x="94" y="197" text-anchor="middle" class="tagtxt">Triton</text>
     <rect class="tag" x="128" y="182" width="34" height="22" rx="5"/><text x="145" y="197" text-anchor="middle" class="tagtxt">Z3</text></g>
@@ -98,7 +99,7 @@
     <text x="16" y="46" class="sub">micro-swarm — isolated fuzzing campaigns</text>
     <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
     <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
-    <text x="16" y="168" class="sub">harness · corpus · coverage · crashes (≠ exploit)</text>
+    <text x="16" y="168" class="sdesc">harness · corpus · coverage · crashes (≠ exploit)</text>
     <g font-size="10.5"><rect class="tag" x="16" y="182" width="52" height="22" rx="5"/><text x="42" y="197" text-anchor="middle" class="tagtxt">AFL++</text>
     <rect class="tag" x="76" y="182" width="72" height="22" rx="5"/><text x="112" y="197" text-anchor="middle" class="tagtxt">libFuzzer</text>
     <rect class="tag" x="156" y="182" width="78" height="22" rx="5"/><text x="195" y="197" text-anchor="middle" class="tagtxt">honggfuzz</text></g>
@@ -111,7 +112,7 @@
     <text x="16" y="46" class="sub">micro-swarm — isolated execution only</text>
     <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
     <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
-    <text x="16" y="168" class="sub">registers/memory · traces · static↔dynamic</text>
+    <text x="16" y="168" class="sdesc">registers/memory · traces · static↔dynamic</text>
     <g font-size="10.5"><rect class="tag" x="16" y="182" width="40" height="22" rx="5"/><text x="36" y="197" text-anchor="middle" class="tagtxt">GDB</text>
     <rect class="tag" x="64" y="182" width="48" height="22" rx="5"/><text x="88" y="197" text-anchor="middle" class="tagtxt">Frida</text>
     <rect class="tag" x="120" y="182" width="78" height="22" rx="5"/><text x="159" y="197" text-anchor="middle" class="tagtxt">WinDbg*</text></g>
@@ -124,7 +125,7 @@
     <text x="16" y="46" class="sub">micro-swarm — reproduce · dedup · root-cause</text>
     <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
     <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
-    <text x="16" y="168" class="sub">signatures · memory-safety vs ordinary · confidence</text>
+    <text x="16" y="168" class="sdesc">signatures · memory-safety vs ordinary · confidence</text>
     <g font-size="10.5"><rect class="tag" x="16" y="182" width="48" height="22" rx="5"/><text x="40" y="197" text-anchor="middle" class="tagtxt">ASan</text>
     <rect class="tag" x="72" y="182" width="54" height="22" rx="5"/><text x="99" y="197" text-anchor="middle" class="tagtxt">UBSan</text>
     <rect class="tag" x="134" y="182" width="64" height="22" rx="5"/><text x="166" y="197" text-anchor="middle" class="tagtxt">Valgrind</text></g>
@@ -137,7 +138,7 @@
     <text x="16" y="46" class="sub">micro-swarm — authorized version diffing</text>
     <line class="mesh" x1="60" y1="92" x2="150" y2="118"/><line class="mesh" x1="150" y1="118" x2="250" y2="90"/><line class="mesh" x1="60" y1="92" x2="250" y2="90"/><line class="mesh" x1="150" y1="118" x2="150" y2="70"/>
     <circle class="agent" cx="60" cy="92" r="11"/><circle class="agent" cx="150" cy="70" r="11"/><circle class="agentai" cx="250" cy="90" r="11"/><circle class="agent" cx="150" cy="118" r="11"/>
-    <text x="16" y="168" class="sub">changed fns · regression · incomplete-fix (human review)</text>
+    <text x="16" y="168" class="sdesc">changed fns · regression · incomplete-fix (human review)</text>
     <g font-size="10.5"><rect class="tag" x="16" y="182" width="62" height="22" rx="5"/><text x="47" y="197" text-anchor="middle" class="tagtxt">BinDiff</text>
     <rect class="tag" x="86" y="182" width="68" height="22" rx="5"/><text x="120" y="197" text-anchor="middle" class="tagtxt">Diaphora</text></g>
   </g>
@@ -162,7 +163,7 @@
 
   <!-- backward feedback: findings can reopen earlier stages -->
   <path class="feedback" d="M840,961 C1180,961 1255,500 1255,120 C1255,96 900,96 852,112"/>
-  <text x="1120" y="500" text-anchor="middle" class="sub" fill="#b89a5e" transform="rotate(90 1120 500)">backward investigation · reopen stages</text>
+  <text x="1263" y="540" text-anchor="middle" class="sub" font-size="10" fill="#b89a5e" transform="rotate(90 1263 540)">backward investigation · reopen stages</text>
 
   <!-- legend -->
   <g transform="translate(40,120)">
